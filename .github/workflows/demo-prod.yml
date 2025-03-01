@@ -15,7 +15,7 @@ jobs:
       - name: Docker Build & Push
         run: |
           cd demo
-          docker login --username 0xDeCA10B ghcr.io/0xdeca10b --password ${{ secrets.GITHUB_TOKEN }}
+          docker login --username 0xDeCA10B ghcr.io/0xDeCA10B --password ${{ secrets.GITHUB_TOKEN }}
 
           name="ghcr.io/0xdeca10b/public/samples/blockchain-ai/0xdeca10b-demo-prod"
           version=`grep version package.json | head -n1 | awk -F: '{ print $2 }' | sed 's/[",[:space:]]\+//g'`
